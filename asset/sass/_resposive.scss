@@ -1,0 +1,211 @@
+@include smartphone
+{
+    .wrapper
+    {
+        margin: 0 10px;
+    }
+    .actionBtn
+    {
+        padding: 15px 50px;
+        background-color: $color-1;
+        width: fit-content;
+        color: $neutral-1;
+        font-size: $font-size-5;
+        font-weight:map-get($map: $font-weight, $key:semi-bold);
+        text-decoration: none;
+        border-radius: $border-radius-2;
+        box-shadow: $box-shadow-2;
+        color: $color-2;
+    }
+.hero-container
+{
+    background-image: url(../images/bg-hero-mobile.svg);
+    height: fit-content;
+    .wrapper
+    {
+        header
+        {
+            @include flex(row,flex-start,center,nowrap);
+            height: 10vh;
+            .logo
+            {
+                background-image: url(../images/logo.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 40%;
+                height: 30px;
+            }
+            .callToBtn
+            {
+                margin: 0 0 0 auto;
+                padding: 5px 30px;
+            }
+        }
+        .main
+        {
+            margin: 30px 0;
+            @include flex(column,center,center,wrap);
+            text-align: center;
+            .hero-content
+            {
+                @include flex(column,center,center,wrap);
+                width: 100%;
+                padding: 10px;
+                .heading
+                {
+                    font-weight: map-get($map: $font-weight, $key: bold );
+                    font-size: $font-size-3;
+             
+                }
+                .content
+                {
+                    width:310px;
+                }
+            }
+            #bg-hero-desktop
+            {
+               margin: 30px 0 0 0 ;
+               width: 100%;
+               height: 200px;
+               background-image: url(../images/illustration-mockups.svg);
+               background-size: contain;
+               background-position: center;
+               background-repeat: no-repeat;
+            }
+        }
+    }
+
+}
+
+.feature
+{
+    margin: 50px 0 10px 0;
+    .wrapper
+    {
+        .feature-card
+        {
+            width: 90%;
+            @include flex(column-reverse,center,center,nowrap);
+            margin: 40px 0;
+            padding:30px 20px;
+            height: fit-content;
+            text-align: center;
+            border-radius: $border-radius-3;
+            #bg-grow-together
+            {
+                order: 2;
+                width: 250px;
+                height: 300px;
+                background-image: url(../images/illustration-grow-together.svg) ;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            #bg-flowing-conversion
+            {
+                order:2;
+                width: 250px;
+                height: 300px;
+                background-image: url(../images/illustration-flowing-conversation.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            #bg-your-user
+            {
+                order: 2;
+                width: 250px;
+                height: 300px;
+                background-image: url(../images/illustration-your-users.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .card-content
+            {
+                width: 300px;
+                .sub-heading
+                {
+                    width: 100%;
+                    font-size: $font-size-3;
+                    font-weight:map-get($map: $font-weight, $key:regular);
+                    font-family: $heading;
+                    margin: 10px 0;
+                }
+                .sub-content
+                {
+                    margin: 0 30px;
+                }
+            }
+        } //feature-card
+        .action-card
+        {
+            width:80%;
+            height: 200px;
+            margin: 50px 0 0 0;
+            left: 3%;
+            .heading
+            {
+                font-size: $font-size-4;
+            }
+        }
+    }
+}
+footer
+{
+
+    padding: 100px 0 0 0;
+    .wrapper
+    {
+        @include flex(column,flex-start,center,wrap);
+        .details
+        {
+            width: 100%;
+            margin: 0;
+            p
+            {
+                font-size: $font-size-4;
+                font-weight: map-get($map: $font-weight, $key:regular );
+                margin: 30px 0;
+            }
+            h5
+            {
+                font-size: $font-size-4;
+                font-weight: map-get($map: $font-weight, $key:regular );
+                margin: 30px 0;
+            }
+        }
+        .page-links
+        {
+            @include flex(column,flex-start,center,wrap);
+            width: 100%; 
+            height: fit-content;
+            .container
+            {
+                margin: 0 20px;
+                @include flex(column,flex-start,center,wrap);
+                a
+                {
+                    text-align: start;
+                    margin: 10px 0;
+                    color: $color-2;
+                    font-size: $font-size-5;
+                    font-weight: map-get($map: $font-weight, $key: regular );
+                }
+            }
+
+        }
+        .social-links
+        {
+            width: 100%;
+            @include flex(row,center,center,wrap);
+            a
+            {
+                margin: 20px;
+            }
+        }
+        small
+        {
+            margin-right:0 ;
+            font-size: $font-size-4;
+        }
+    }
+}
+}
